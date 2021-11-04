@@ -1,6 +1,6 @@
 # Adjustable Single-term Graph Diffusion Learning
 <br>정보 전파 조절이 가능하며 단순화된(또는 단일항으로 표현된) 그래프 확산 신경망을 이용한 링크 예측 및 분류 성능 향상.<br>
-* 현재 정확한 용어 정립이 되어 있지 않아, 'Adjustable single-term graph diffusion learning'과 'Adjustable and simplified graph diffusion learning' 제목이 혼재될 수 있습니다.
+- 현재 정확한 용어 정립이 되어 있지 않아, 'Adjustable single-term graph diffusion learning'과 'Adjustable and simplified graph diffusion learning' 제목이 혼재될 수 있습니다.
 
 <br>
 
@@ -15,6 +15,10 @@
 
 ### 코드 파일 설명
 #### 모델 수행 코드 파일
+- 모든 실험은 colab 환경에서 수행되었으므로, 로컬 환경에서 실행 시 코드 앞부분의 drive mount 및 경로 설정 파트를 생략해야 한다. 
+- 각 실험의 결과는 미리 생성한 json 파일에 추가되도록 설정되어 있다. 따라서 실험 전 결과가 저장될 json 파일을 생성해야 한다.
+<br>
+
 - **etc_emb.ipynb:** 링크 예측 실험의 baseline인 spectral clustering(SC)와 DeepWalk(DW) 모델 코드 파일.
 - **gae.ipynb:** GAE를 이용한 링크 예측 실험 코드 파일.
 - **vgae.ipynb:** VGAE를 이용한 링크 예측 실험 코드 파일.
@@ -87,9 +91,9 @@
 
 <br>
 
-Kipf & Welling. (2016). Variational Graph Auto-Encoders. NIPS Workshop on Bayesian Deep Learning.<br>
-Kingma & Welling. (2014). Auto-encoding variational bayes. In Proceedings of the International Conference on Learning Representations (ICLR).<br>
-Klicpera et al. (2019). Diffusion Improves Graph Learning. 33rd Conference on Neural Information Processing Systems (NeurIPS 2019). <br>
-Kipf & Welling. (2017). Semi-supervised classification with graph convolutional networks. ICLR 2017.<br>
+- Kipf & Welling. (2016). Variational Graph Auto-Encoders. NIPS Workshop on Bayesian Deep Learning.<br>
+- Kingma & Welling. (2014). Auto-encoding variational bayes. In Proceedings of the International Conference on Learning Representations (ICLR).<br>
+- Klicpera et al. (2019). Diffusion Improves Graph Learning. 33rd Conference on Neural Information Processing Systems (NeurIPS 2019). <br>
+- Kipf & Welling. (2017). Semi-supervised classification with graph convolutional networks. ICLR 2017.<br>
 
 
