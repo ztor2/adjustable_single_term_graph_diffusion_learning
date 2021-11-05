@@ -46,6 +46,7 @@
 ### 연구 방법
 - 기존 GCN에 사용된 *renormalization trick* 파트에  파라미터 &alpha;를 도입해, 인접행렬을 제곱할 때마다 중심 노드와 이웃 노드의 정보 반영 비율을 조절할 수 있도록 한다.
 - Degree matrix로 symmetrically normalization을 적용하고 반영하고자 하는 이웃 노드와의 거리만큼 *n* 제곱한다.
+- 이렇게 simplifed graph diffusion 연산이 적용된 인접 행렬을 링크 예측 모델(GAE, VGAE) 및 분류 모델(GCN)에 사용한다. 
 
 <p align="center"> <img src="https://i.esdrop.com/d/fha5flk1blzo/1MRVlN5z7Z.PNG" width="30%" </p>
 
