@@ -1,5 +1,7 @@
 # Adjustable Single-term Graph Diffusion Learning
-<br>정보 전파 조절이 가능하며 단순화된(또는 단일항으로 표현된) 그래프 확산 신경망을 이용한 링크 예측 및 분류 성능 향상.<br>
+<br>
+
+정보 전파 조절이 가능하며 단순화된(또는 단일항으로 표현된) 그래프 확산 신경망을 이용한 링크 예측 및 분류 성능 향상.<br>
 - 현재 정확한 용어 정립이 되어 있지 않아, 'Adjustable single-term graph diffusion learning'과 'Adjustable and simplified graph diffusion learning' 제목이 혼재될 수 있습니다.
 
 <br>
