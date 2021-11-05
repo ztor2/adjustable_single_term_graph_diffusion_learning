@@ -50,7 +50,7 @@
 <p align="center"> <img src="https://i.esdrop.com/d/fha5flk1blzo/1MRVlN5z7Z.PNG" width="30%" </p>
 
 ### 관련 연구
-#### GCN(Kipf & Welling, 2017)
+#### Graph covolutional networks(Kipf & Welling, 2017)
 
 <p align="center"> <img src="https://i.esdrop.com/d/fha5flk1blzo/ckv0YHvbDG.PNG" width="60%" </p>
 
