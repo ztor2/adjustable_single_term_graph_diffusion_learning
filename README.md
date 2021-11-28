@@ -18,6 +18,8 @@
 #### 모델 수행 코드 파일
 - 모든 실험은 colab 환경에서 수행되었으므로, 로컬 환경에서 실행 시 코드 앞부분의 drive mount 및 경로 설정 파트를 생략해야 한다. 
 - 각 실험의 결과는 미리 생성한 json 파일에 추가되도록 설정되어 있다. 따라서 실험 전 결과가 저장될 json 파일을 생성해야 한다.
+- 모든 실험은 2021년 11월 기준 pytorch 1.9.0 버전, cuda는 10.2 또는 11.1 버전, scikit-learn은 0.24.2 버전에서 정상 작동하는 것을 확인함.
+
 <br>
 
 - **etc_emb.ipynb:** 링크 예측 실험의 baseline인 spectral clustering(SC)와 DeepWalk(DW) 모델 코드 파일.
@@ -46,6 +48,7 @@
 ### 연구 방법
 - 기존 GCN에 사용된 *renormalization trick* 파트에  파라미터 &alpha;를 도입해, 인접행렬을 제곱할 때마다 중심 노드와 이웃 노드의 정보 반영 비율을 조절할 수 있도록 한다.
 - Degree matrix로 symmetrically normalization을 적용하고 반영하고자 하는 이웃 노드와의 거리만큼 *n* 제곱한다.
+- 이렇게 simplifed graph diffusion 연산이 적용된 인접 행렬을 링크 예측 모델(GAE, VGAE) 및 분류 모델(GCN)에 적용한다. 
 
 <p align="center"> <img src="https://i.esdrop.com/d/fha5flk1blzo/1MRVlN5z7Z.PNG" width="30%" </p>
 
