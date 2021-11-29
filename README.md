@@ -42,7 +42,7 @@
 - 데이터셋은 벤치마크 데이터인 cora, citeseer와 arXiv 데이터로부터 추출된 arXiv-condmat(arx) 데이터가 있다.
 - 데이터셋 유형은 graph(인접 행렬), feature(노드 특성 정보), labels(레이블 정보)로 구분된다.
 - 실험에 사용된 데이터 중, pubmed 데이터셋은 용량 문제로 저장소에 포함되지 않았다.
-
+- 모든 실험 결과는 results 폴더 내에 json 파일로 저장되어 있으며 readme 파일의 index를 통해 실험결과를 확인할 수 있다.
 <br>
 
 ### 연구 방법
