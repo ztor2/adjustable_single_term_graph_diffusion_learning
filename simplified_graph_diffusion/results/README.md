@@ -1,6 +1,6 @@
 ### Result index
 
-Result file contains model setting in json format.
+Each file contains model setting and results in json format.
 
 <br>
 
