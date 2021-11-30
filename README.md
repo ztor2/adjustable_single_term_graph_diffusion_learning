@@ -22,10 +22,10 @@
 
 <br>
 
-- **etc_emb.ipynb:** 링크 예측 실험의 baseline인 spectral clustering(SC)와 DeepWalk(DW) 모델 코드 파일.
+- **sc_dw.ipynb:** 링크 예측 실험의 baseline인 spectral clustering(SC)와 DeepWalk(DW) 모델 코드 파일.
 - **gae.ipynb:** GAE를 이용한 링크 예측 실험 코드 파일.
 - **vgae.ipynb:** VGAE를 이용한 링크 예측 실험 코드 파일.
-- **baseline.ipynb:**: 분류 실험의 baseline인 logistic regression과 multi-layer perceptron(MLP) 모델 코드 파일.
+- **logreg_mlp.ipynb:**: 분류 실험의 baseline인 logistic regression과 multi-layer perceptron(MLP) 모델 코드 파일.
 - **gcn.ipynb:** GCN을 이용한 분류 실험 코드 파일.
 <br>
 
