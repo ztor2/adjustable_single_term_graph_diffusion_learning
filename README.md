@@ -6,7 +6,7 @@
 - 본 코드의 GAE, VGAE 파트는 다음 두 저장소의 코드를 바탕으로 구축되었습니다.<br>
 https://github.com/tkipf/gae<br>
 https://github.com/zfjsail/gae-pytorch
-- 본 연구에 사용된 벤치마크 데이터셋 Cora, Citeseer, Pubmed 데이터셋은 메타데이터로부터 구축되었고, 다음 저장소에서 일부 전처리 과정 및 데이터셋을 확인할 수 있습니다.<br>
+- 본 연구에 사용된 Cora, Citeseer, Pubmed, arXiv-condmat 데이터셋은 모두 메타데이터로부터 구축되었고, 다음 저장소에서 일부 전처리 과정 및 데이터셋을 확인할 수 있습니다.<br>
 https://github.com/ztor2/network_datasets
 
 <br>
