@@ -53,14 +53,16 @@ def preprocess_graph_diff(adj, n_diff, alpha):
     adj_diff = np.power(adj_normalized, n_diff)
     return sparse_to_torch_sparse_tensor(adj_diff)
 
-def preprocess_graph_diff_test(adj, n_diff, alpha):
+def preprocess_graph_diff_nth(adj, n_diff, alpha):
+    adj_diff = sp.eye(adj.shape[0])
     adj = sp.coo_matrix(adj)
     adj_ = propagation_prob(adj, alpha)
-    adj_= np.power(adj_, n_diff)
     rowsum = np.array(adj_.sum(1))
     degree_mat_inv_sqrt = sp.diags(np.power(rowsum, -0.5).flatten())
     adj_normalized = adj_.dot(degree_mat_inv_sqrt).transpose().dot(degree_mat_inv_sqrt).tocoo()
-    return sparse_to_torch_sparse_tensor(adj_normalized)
+    for i in range(1, n_diff+1):
+        adj_diff += np.power(adj_normalized, i)
+    return sparse_to_torch_sparse_tensor(adj_diff)
 
 def propagation_prob(adj, alpha):
     if  alpha == 0.5:
@@ -164,12 +166,6 @@ def mask_test_edges(adj, test, val):
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
-# def sigmoid(x):
-#     if -x > np.log(np.finfo(type(x)).max):
-#         return 0.0    
-#     x = np.exp(-x)
-#     return 1.0/ (1.0 + x)
-
 def get_roc_score_gae(recon_emb, adj_orig, edges_pos, edges_neg):
     adj_rec = recon_emb
     preds = []
@@ -187,3 +183,9 @@ def get_roc_score_gae(recon_emb, adj_orig, edges_pos, edges_neg):
 
     return roc_score, ap_score
 
+def labels_encode(labels):
+    classes = set(labels)
+    classes_dict = {c: np.identity(len(classes))[i, :] for i, c in enumerate(classes)}
+    labels_onehot = np.array(list(map(classes_dict.get, labels)), dtype=np.int32)
+    labels = torch.LongTensor(np.where(labels_onehot)[1])
+    return labels

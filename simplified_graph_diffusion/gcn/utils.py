@@ -69,6 +69,17 @@ def preprocess_graph_diff(adj, diff_n, diff_alpha):
     # adj_diff = adj_normalized + np.power(adj_normalized, diff_n)
     return sparse_to_torch_sparse_tensor(adj_diff)
 
+def preprocess_graph_diff_nth(adj, n_diff, alpha):
+    adj_diff = sp.eye(adj.shape[0])
+    adj = sp.coo_matrix(adj)
+    adj_ = propagation_prob(adj, alpha)
+    rowsum = np.array(adj_.sum(1))
+    degree_mat_inv_sqrt = sp.diags(np.power(rowsum, -0.5).flatten())
+    adj_normalized = adj_.dot(degree_mat_inv_sqrt).transpose().dot(degree_mat_inv_sqrt).tocoo()
+    for i in range(1, n_diff+1):
+        adj_diff += np.power(adj_normalized, i)
+    return sparse_to_torch_sparse_tensor(adj_diff)
+
 def propagation_prob(adj, diff_alpha):
     if  diff_alpha != 0.5: 
         adj = (diff_alpha) * adj + (1-diff_alpha) * sp.eye(adj.shape[0])

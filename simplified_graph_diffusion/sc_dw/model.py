@@ -1,5 +1,5 @@
 # models for baseline experiments
-from etc_emb.utils import *
+from sc_dw.utils import *
 import numpy as np
 import time
 from sklearn.manifold import spectral_embedding
