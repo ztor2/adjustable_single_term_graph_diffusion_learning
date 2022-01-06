@@ -3,9 +3,10 @@
 
 정보 전파 조절이 가능하며 단순화된(또는 단일항으로 표현된) 그래프 확산 신경망을 이용한 링크 예측 및 분류 성능 향상.<br>
 - 'Adjustable single-term graph diffusion learning'과 'Adjustable and simplified graph diffusion learning' 제목이 혼재될 수 있습니다.
-- 본 코드의 GAE, VGAE 파트는 다음 두 저장소의 코드를 바탕으로 구축되었습니다.<br>
+- 본 코드의 GAE, VGAE, GCN 파트는 다음 두 저장소의 코드를 바탕으로 구축되었습니다.<br>
 https://github.com/tkipf/gae<br>
-https://github.com/zfjsail/gae-pytorch
+https://github.com/zfjsail/gae-pytorch<br>
+https://github.com/tkipf/gcn
 - 본 연구에 사용된 Cora, Citeseer, Pubmed, arXiv-condmat 데이터셋은 모두 메타데이터로부터 구축되었고, 다음 저장소에서 일부 전처리 과정 및 데이터셋을 확인할 수 있습니다.<br>
 https://github.com/ztor2/network_datasets
 
